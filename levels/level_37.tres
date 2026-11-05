@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_hmm4u"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_bj5f3"]
+
+[sub_resource type="Resource" id="Resource_qstkr"]
+script = ExtResource("1_hmm4u")
+type = 1
+amount = 3
+
+[sub_resource type="Resource" id="Resource_yceli"]
+script = ExtResource("1_hmm4u")
+color = 3
+amount = 9
+
+[sub_resource type="Resource" id="Resource_vovru"]
+script = ExtResource("1_hmm4u")
+color = 4
+amount = 8
+
+[resource]
+script = ExtResource("2_bj5f3")
+title = "Anchors Away [d7]"
+moves = 30
+cols = 6
+rows = 6
+anchor_count = 3
+blanks = true
+goals = Array[ExtResource("1_hmm4u")]([SubResource("Resource_qstkr"), SubResource("Resource_yceli"), SubResource("Resource_vovru")])

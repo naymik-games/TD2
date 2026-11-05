@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_r1uhd"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_ivbr5"]
+
+[sub_resource type="Resource" id="Resource_qi1hd"]
+script = ExtResource("1_r1uhd")
+type = 2
+amount = 5
+
+[sub_resource type="Resource" id="Resource_3q5cq"]
+script = ExtResource("1_r1uhd")
+type = 3
+amount = 3
+
+[sub_resource type="Resource" id="Resource_rptw0"]
+script = ExtResource("1_r1uhd")
+color = 2
+amount = 8
+
+[resource]
+script = ExtResource("2_ivbr5")
+title = "Break the Ice [d4]"
+num_colors = 4
+cols = 6
+rows = 6
+ice_count = 6
+bomb_count = 2
+bomb_fuse = 10
+goals = Array[ExtResource("1_r1uhd")]([SubResource("Resource_qi1hd"), SubResource("Resource_3q5cq"), SubResource("Resource_rptw0")])

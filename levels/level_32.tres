@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_aip7p"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_yos28"]
+
+[sub_resource type="Resource" id="Resource_ok2jn"]
+script = ExtResource("1_aip7p")
+type = 4
+amount = 3
+
+[sub_resource type="Resource" id="Resource_obbak"]
+script = ExtResource("1_aip7p")
+color = 4
+amount = 6
+
+[sub_resource type="Resource" id="Resource_15qs8"]
+script = ExtResource("1_aip7p")
+amount = 6
+
+[resource]
+script = ExtResource("2_yos28")
+title = "Rock Solid [d3]"
+moves = 16
+cols = 6
+rows = 6
+rock_count = 3
+goals = Array[ExtResource("1_aip7p")]([SubResource("Resource_ok2jn"), SubResource("Resource_obbak"), SubResource("Resource_15qs8")])

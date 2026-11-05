@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_jetqf"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_u3qnq"]
+
+[sub_resource type="Resource" id="Resource_jetqf"]
+script = ExtResource("1_jetqf")
+type = 1
+
+[resource]
+script = ExtResource("2_u3qnq")
+title = "Second Round"
+cols = 6
+anchor_count = 3
+goals = Array[ExtResource("1_jetqf")]([SubResource("Resource_jetqf")])

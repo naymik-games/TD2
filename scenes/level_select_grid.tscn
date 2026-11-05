@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://coy8dxsg8l7w1"]
+
+[ext_resource type="Script" uid="uid://djho56x3t82ew" path="res://scripts/level_select_grid.gd" id="1_c8o2w"]
+
+[node name="level_select_grid" type="Control" unique_id=1741599183]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c8o2w")

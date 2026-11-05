@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_hlc66"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_vepde"]
+
+[sub_resource type="Resource" id="Resource_hlc66"]
+script = ExtResource("1_hlc66")
+color = 4
+amount = 8
+
+[sub_resource type="Resource" id="Resource_vepde"]
+script = ExtResource("1_hlc66")
+color = 3
+amount = 9
+
+[resource]
+script = ExtResource("2_vepde")
+title = "Holes [d7]"
+moves = 21
+num_colors = 6
+cols = 6
+rows = 6
+anchor_count = 2
+blanks = true
+goals = Array[ExtResource("1_hlc66")]([SubResource("Resource_hlc66"), SubResource("Resource_vepde")])

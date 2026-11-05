@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_mv4m2"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_biwnt"]
+
+[sub_resource type="Resource" id="Resource_mv4m2"]
+script = ExtResource("1_mv4m2")
+type = 2
+amount = 5
+
+[sub_resource type="Resource" id="Resource_biwnt"]
+script = ExtResource("1_mv4m2")
+color = 3
+amount = 8
+
+[sub_resource type="Resource" id="Resource_ebs2p"]
+script = ExtResource("1_mv4m2")
+
+[resource]
+script = ExtResource("2_biwnt")
+title = "Holes [d4]"
+moves = 24
+num_colors = 4
+cols = 6
+rows = 7
+ice_count = 5
+blanks = true
+goals = Array[ExtResource("1_mv4m2")]([SubResource("Resource_mv4m2"), SubResource("Resource_biwnt"), SubResource("Resource_ebs2p")])

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_j16fo"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_dmesa"]
+
+[sub_resource type="Resource" id="Resource_j16fo"]
+script = ExtResource("1_j16fo")
+color = 1
+
+[sub_resource type="Resource" id="Resource_dmesa"]
+script = ExtResource("1_j16fo")
+color = 2
+amount = 9
+
+[resource]
+script = ExtResource("2_dmesa")
+title = "Color Rush [d1]"
+moves = 11
+num_colors = 4
+cols = 6
+rows = 6
+goals = Array[ExtResource("1_j16fo")]([SubResource("Resource_j16fo"), SubResource("Resource_dmesa")])

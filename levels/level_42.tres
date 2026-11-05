@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_gflkc"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_0nkxi"]
+
+[sub_resource type="Resource" id="Resource_y1e0r"]
+script = ExtResource("1_gflkc")
+amount = 40
+
+[sub_resource type="Resource" id="Resource_t6n5l"]
+script = ExtResource("1_gflkc")
+color = 1
+amount = 40
+
+[sub_resource type="Resource" id="Resource_v2r67"]
+script = ExtResource("1_gflkc")
+color = 2
+amount = 40
+
+[resource]
+script = ExtResource("2_0nkxi")
+title = "Color Jam"
+cols = 7
+rows = 9
+goals = Array[ExtResource("1_gflkc")]([SubResource("Resource_y1e0r"), SubResource("Resource_t6n5l"), SubResource("Resource_v2r67")])

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_swqpf"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_yjume"]
+
+[sub_resource type="Resource" id="Resource_swqpf"]
+script = ExtResource("1_swqpf")
+type = 3
+amount = 4
+
+[sub_resource type="Resource" id="Resource_yjume"]
+script = ExtResource("1_swqpf")
+color = 1
+amount = 15
+
+[resource]
+script = ExtResource("2_yjume")
+title = "Ticking Clock"
+moves = 25
+cols = 7
+rock_health = 3
+bomb_count = 2
+bomb_fuse = 7
+goals = Array[ExtResource("1_swqpf")]([SubResource("Resource_swqpf"), SubResource("Resource_yjume")])

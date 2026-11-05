@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_kg4fs"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_32bwu"]
+
+[sub_resource type="Resource" id="Resource_kg4fs"]
+script = ExtResource("1_kg4fs")
+amount = 9
+
+[sub_resource type="Resource" id="Resource_32bwu"]
+script = ExtResource("1_kg4fs")
+color = 3
+amount = 11
+
+[resource]
+script = ExtResource("2_32bwu")
+title = "Holes [d3]"
+moves = 19
+cols = 6
+rows = 7
+blanks = true
+goals = Array[ExtResource("1_kg4fs")]([SubResource("Resource_kg4fs"), SubResource("Resource_32bwu")])

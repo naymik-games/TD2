@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_dvph5"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_bf3r0"]
+
+[sub_resource type="Resource" id="Resource_dvph5"]
+script = ExtResource("1_dvph5")
+
+[sub_resource type="Resource" id="Resource_bf3r0"]
+script = ExtResource("1_dvph5")
+color = 1
+
+[sub_resource type="Resource" id="Resource_6gvyy"]
+script = ExtResource("1_dvph5")
+color = 4
+
+[resource]
+script = ExtResource("2_bf3r0")
+title = "Just Blank"
+num_colors = 6
+cols = 6
+blanks = true
+goals = Array[ExtResource("1_dvph5")]([SubResource("Resource_dvph5"), SubResource("Resource_bf3r0"), SubResource("Resource_6gvyy")])

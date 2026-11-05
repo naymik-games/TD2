@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_1gosu"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_7j3md"]
+
+[sub_resource type="Resource" id="Resource_nswlc"]
+script = ExtResource("1_1gosu")
+color = 1
+amount = 15
+
+[sub_resource type="Resource" id="Resource_i4xjn"]
+script = ExtResource("1_1gosu")
+color = 4
+amount = 18
+
+[resource]
+script = ExtResource("2_7j3md")
+title = "Holes [d6]"
+moves = 23
+cols = 7
+ice_count = 8
+blanks = true
+goals = Array[ExtResource("1_1gosu")]([SubResource("Resource_nswlc"), SubResource("Resource_i4xjn")])

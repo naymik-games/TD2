@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_uk07a"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_mh00y"]
+
+[sub_resource type="Resource" id="Resource_uk07a"]
+script = ExtResource("1_uk07a")
+type = 4
+amount = 5
+
+[sub_resource type="Resource" id="Resource_mh00y"]
+script = ExtResource("1_uk07a")
+type = 2
+amount = 3
+
+[sub_resource type="Resource" id="Resource_ohlaf"]
+script = ExtResource("1_uk07a")
+type = 1
+amount = 2
+
+[sub_resource type="Resource" id="Resource_oit4y"]
+script = ExtResource("1_uk07a")
+amount = 7
+
+[resource]
+script = ExtResource("2_mh00y")
+title = "Rock Solid [d8]"
+moves = 45
+cols = 6
+rows = 6
+anchor_count = 2
+ice_count = 5
+rock_count = 5
+rock_health = 3
+goals = Array[ExtResource("1_uk07a")]([SubResource("Resource_uk07a"), SubResource("Resource_mh00y"), SubResource("Resource_ohlaf"), SubResource("Resource_oit4y")])

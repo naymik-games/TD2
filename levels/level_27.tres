@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_ken4n"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_43t61"]
+
+[sub_resource type="Resource" id="Resource_ken4n"]
+script = ExtResource("1_ken4n")
+type = 4
+amount = 6
+
+[sub_resource type="Resource" id="Resource_43t61"]
+script = ExtResource("1_ken4n")
+amount = 15
+
+[resource]
+script = ExtResource("2_43t61")
+title = "Rock Solid"
+moves = 25
+cols = 7
+rock_count = 6
+rock_health = 3
+goals = Array[ExtResource("1_ken4n")]([SubResource("Resource_ken4n"), SubResource("Resource_43t61")])

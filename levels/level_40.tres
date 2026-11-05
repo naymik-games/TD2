@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/goal_data.gd" id="1_cqjjj"]
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="2_so1ds"]
+
+[sub_resource type="Resource" id="Resource_yoy8l"]
+script = ExtResource("1_cqjjj")
+color = 5
+
+[sub_resource type="Resource" id="Resource_3js5k"]
+script = ExtResource("1_cqjjj")
+color = 4
+amount = 11
+
+[resource]
+script = ExtResource("2_so1ds")
+title = "Holes [d9]"
+moves = 24
+num_colors = 6
+cols = 6
+rows = 7
+anchor_count = 2
+rock_count = 4
+rock_health = 1
+blanks = true
+goals = Array[ExtResource("1_cqjjj")]([SubResource("Resource_yoy8l"), SubResource("Resource_3js5k")])

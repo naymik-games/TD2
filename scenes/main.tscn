@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bj0vy3mvjr4is"]
+
+[ext_resource type="Script" uid="uid://dak6hxwx7ie87" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://bcwx5nru3gm5v" path="res://assets/tile.png" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://ckrm1gworqynn" path="res://assets/anchor.png" id="3_sugp2"]
+[ext_resource type="Texture2D" uid="uid://vjfhn28os50i" path="res://assets/icon_one_dot.png" id="4_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cdu2bn8hn47w" path="res://assets/tile_ice.png" id="4_trceg"]
+[ext_resource type="Texture2D" uid="uid://c1p0bo8ehslij" path="res://assets/tile_rock.png" id="5_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://of7iuhn6qwpf" path="res://assets/icon_one_dot_pressed.png" id="5_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bm8a7gmb4lri" path="res://assets/icon_one_dot_disabled.png" id="6_tipki"]
+[ext_resource type="Texture2D" uid="uid://bna5xwg2m5vtn" path="res://assets/icon_one_color.png" id="7_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://d4fmn7km12nge" path="res://assets/icon_one_color_pressed.png" id="8_trceg"]
+[ext_resource type="Texture2D" uid="uid://cbd3pqt6tysja" path="res://assets/icon_one_color_disabled.png" id="9_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://sj88d524r8y5" path="res://assets/icon_shuffle.png" id="10_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://by6ypw28kflei" path="res://assets/icon_shuffle_pressed.png" id="11_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://b11b02x6jr1ib" path="res://assets/icon_shuffle_disabled.png" id="12_muem4"]
+[ext_resource type="Texture2D" uid="uid://doq8f0m74xe2d" path="res://assets/icon_menu.png" id="15_jkv2x"]
+
+[node name="Main" type="Node2D" unique_id=730296320]
+script = ExtResource("1_o5qli")
+dot_texture = ExtResource("2_0wfyh")
+anchor_texture = ExtResource("3_sugp2")
+ice_texture = ExtResource("4_trceg")
+rock_texture = ExtResource("5_a8y0u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=254871053]
+offset_top = 1209.0
+offset_right = 720.0
+offset_bottom = 1273.0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="remove_dot_button" type="TextureButton" parent="HBoxContainer" unique_id=603892367]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("4_tefeu")
+texture_pressed = ExtResource("5_o6xl0")
+texture_disabled = ExtResource("6_tipki")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="remove_color_button" type="TextureButton" parent="HBoxContainer" unique_id=122259453]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("7_eb6dy")
+texture_pressed = ExtResource("8_trceg")
+texture_disabled = ExtResource("9_a8y0u")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="shuffle_board_button" type="TextureButton" parent="HBoxContainer" unique_id=1319667767]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("10_jkv2x")
+texture_pressed = ExtResource("11_jbj1t")
+texture_disabled = ExtResource("12_muem4")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="game_menu" type="PopupMenu" parent="." unique_id=1817168863]
+position = Vector2i(36, 36)
+theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_separator_size = 32
+item_count = 2
+item_0/text = "LEVELS"
+item_0/id = 0
+item_1/text = "RESTART"
+item_1/id = 1
+
+[node name="menu_button" type="TextureButton" parent="." unique_id=728329460]
+z_index = 1
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 68.0
+texture_normal = ExtResource("15_jkv2x")
+
+[connection signal="pressed" from="HBoxContainer/remove_dot_button" to="." method="_on_remove_dot_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/remove_color_button" to="." method="_on_remove_color_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/shuffle_board_button" to="." method="_on_shuffle_board_button_pressed"]
+[connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]
